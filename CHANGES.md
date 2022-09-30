@@ -1,8 +1,8 @@
 # Changes
 Recently completed and planned work is tracked here.
 
-## [0.0.0](.)
-- Add created
+## [0.0.1](.) [0.1.0](.)
+- Created early versions
 
-## [Next](.)
-- **TODO** Add CI/CD
+## [0.1.0](.)
+- Fixed `s3d-post-flow` for `v` tags
