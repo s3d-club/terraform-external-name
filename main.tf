@@ -6,37 +6,35 @@ locals {
   # get a new pet we get a new date.
   date_segment = var.disable_date ? null : formatdate("YYMMDD", time_static.this.rfc3339)
 
-  # The new name is constructed to be unique but still nice to look at
-  name_prefix = substr(lower(local.str), 0, var.size)
+  # The new prefix is constructed to be unique but still nice to look at
+  prefix = substr(lower(local.str), 0, var.length)
 
   # We replace the python name due to the confusion that can result for teams
   # that think of python as a technology.
-  pet_name = replace(random_pet.this.id, "python", "human")
+  pet_name = replace(random_pet.this.id, "python", "znake")
 
   # Depending on input we may add the segment before or after the existing
   # prefix
   str = replace(
     join("-", compact(
-      var.as_pre_prefix ? [
+      var.pet_first ? [
         local.pet_name,
-        var.name_segment,
+        var.context,
         local.date_segment,
-        var.name_prefix,
         ] : [
-        var.name_prefix,
-        var.name_segment,
-        local.date_segment,
+        var.context,
         local.pet_name,
+        local.date_segment,
       ])
   ), ".", "-")
 
   # Merge tags to add name
-  tags = merge(module.change.tags, { "Name" = local.name_prefix })
+  tags = merge(module.changes.tags, { "Name" = local.prefix })
 }
 
-# We have a name but we also have tags
-module "change" {
-  source = "git::https://github.com/s3d-club/terraform-external-data-changes?ref=0.0.7"
+# This module is the primary user of the changes module.
+module "changes" {
+  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.2"
 
   path = var.path
   tags = var.tags
@@ -48,16 +46,10 @@ resource "time_static" "this" {
 }
 
 resource "random_pet" "this" {
-  keepers = {
-    # Change pet scope here occasionally force all new names and the associated
-    # resource replacements.
-    pet_scope = 0
-
-    # The reason for the keeper is to force a new pet any time the requested
-    # name changes.
-    name_prefix  = var.name_prefix
-    name_segment = var.name_segment
-  }
+  # if the context changes we force a new name
+  keepers = merge(var.keepers, {
+    context = var.context
+  })
 
   length = var.pet_length
 }

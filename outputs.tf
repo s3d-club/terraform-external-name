@@ -1,29 +1,26 @@
-output "change" {
-  value = module.change
+output "prefix" {
+  value = local.prefix
 
   description = <<-END
-		The Change Module
-
-		Notes are [HERE](https://go.s3d.club/tf/exrn/tags)
+    the constructed prefix.
+    https:://go.s3d.club/tf/name#prefix
     END
 }
 
-output "name_prefix" {
-  value = local.name_prefix
+output "release" {
+  value = module.changes.release
 
   description = <<-END
-		Name Prefix
-
-		Notes are [HERE](https://go.s3d.club/tf/exrn/name-tags#name_prefix)
-		END
+    the release of the module.
+    https:://go.s3d.club/tf/name#release
+    END
 }
 
 output "tags" {
   value = local.tags
 
   description = <<-END
-		Tags with `Name` merged
-
-		Notes are [HERE](https://go.s3d.club/tf/extrn/tags)
+    the tags.
+    https:://go.s3d.club/tf/name#tags
     END
 }
