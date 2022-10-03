@@ -9,3 +9,6 @@ Recently completed and planned work is tracked here.
 - Improved variables and outputs
 - Removed `s3d-post-flow`
 - Upgraded `change` module
+
+## [0.1.2](.)
+- Upgraded `change` module for error handling
