@@ -6,3 +6,8 @@ Recently completed and planned work is tracked here.
 
 ## [0.1.3](.)
 - Upgraded `change` module for error handling
+
+## [0.1.4](.)
+- Minor update to code of conduct
+- Removed non-linux terraform lock hash values
+- Improved descriptions on variables-

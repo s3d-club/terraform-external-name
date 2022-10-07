@@ -1,26 +1,17 @@
 output "prefix" {
   value = local.prefix
 
-  description = <<-END
+  description = <<-EOT
     the constructed prefix.
     https:://go.s3d.club/tf/name#prefix
-    END
-}
-
-output "release" {
-  value = module.changes.release
-
-  description = <<-END
-    the release of the module.
-    https:://go.s3d.club/tf/name#release
-    END
+    EOT
 }
 
 output "tags" {
   value = local.tags
 
-  description = <<-END
-    the tags.
-    https:://go.s3d.club/tf/name#tags
-    END
+  description = <<-EOT
+    a map with tags that describe the content of `CHANGES.md`.
+    https://go.s3d.club/tf/name#tags
+    EOT
 }
