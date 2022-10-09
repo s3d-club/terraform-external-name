@@ -11,3 +11,6 @@ Recently completed and planned work is tracked here.
 - Minor update to code of conduct
 - Removed non-linux terraform lock hash values
 - Improved descriptions on variables-
+
+## [0.1.5](.)
+- Updated `changes` module
