@@ -4,7 +4,7 @@ A module for the management of names.
 ## Also READ
 Please read our [LICENSE][lice], [CONTRIBUTING][cont], [CODE-OF-CONDUCT][code],
 and [CHANGES][chge] documents before working in this project and anytime they
-are update.
+are updated.
 
 ## Overview
 This module produces randomized names that follow a style we find is useful.
