@@ -10,7 +10,6 @@ Recently completed and planned work is tracked here.
 - Removed dependency on `s3d-flow-json`
 - Updated `.terraform.lock.hcl`
 
-## [0.1.12](.)
+## [0.1.12](.) to [0.1.13](.)
 - Improved descriptions of variables and outputs
 - Updated `changes` module
-
