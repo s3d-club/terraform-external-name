@@ -29,12 +29,15 @@ locals {
   ), ".", "-")
 
   # Merge tags to add name
-  tags = merge(module.changes.tags, { "Name" = local.prefix })
+  tags = module.changes.tags
+
+  # Merge tags to add name
+  tags_with_name = merge(module.changes.tags, { "Name" = local.prefix })
 }
 
 # This module is the primary user of the changes module.
 module "changes" {
-  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.13"
+  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.14"
 
   path = var.path
   tags = var.tags

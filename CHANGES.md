@@ -6,3 +6,8 @@ Recently completed and planned work is tracked here.
 
 ## [0.1.10](.)
 - Removed dependency on `s3d-flow-json`
+
+## [0.1.11](.)
+- Added `tags_with_name` output
+- Changed `tags` output so `Name` tag is not included
+- Updated `.terraform.lock.hcl`

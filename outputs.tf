@@ -15,3 +15,12 @@ output "tags" {
     https://go.s3d.club/tf/name#tags
     EOT
 }
+
+output "tags_with_name" {
+  value = local.tags_with_name
+
+  description = <<-EOT
+    the tags for the module tags with an additional `Name` tag.
+    https://go.s3d.club/tf/name#tags
+    EOT
+}
