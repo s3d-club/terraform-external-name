@@ -6,6 +6,14 @@ output "prefix" {
     EOT
 }
 
+output "release" {
+  value = module.changes.release
+
+  description = <<-EOT
+    The current release.
+    EOT
+}
+
 output "tags" {
   value = local.tags
 

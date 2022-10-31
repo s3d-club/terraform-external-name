@@ -37,7 +37,7 @@ locals {
 
 # This module is the primary user of the changes module.
 module "changes" {
-  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.17"
+  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.18"
 
   path = var.path
   tags = var.tags
