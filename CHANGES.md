@@ -16,3 +16,9 @@ This file describes the project history as it relates to tagged versions.
 
 ## [0.1.15](.)
 - Changed to use `-x` as suffix for pre-release versions
+
+## [0.1.16](.)
+- Sorted `variables.tf`
+- Upgraded `terraform` version
+- Upgraded `time` provider
+- Upgraded `changes` module

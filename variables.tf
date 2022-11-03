@@ -1,12 +1,3 @@
-variable "pet_first" {
-  default = false
-  type    = bool
-
-  description = <<-EOT
-    An option to include the pet name as the first component of the outputted name.
-    EOT
-}
-
 variable "context" {
   default = null
   type    = string
@@ -52,6 +43,15 @@ variable "path" {
 
   description = <<-EOT
     The path of the calling module.
+    EOT
+}
+
+variable "pet_first" {
+  default = false
+  type    = bool
+
+  description = <<-EOT
+    An option to include the pet name as the first component of the outputted name.
     EOT
 }
 

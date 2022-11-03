@@ -37,22 +37,22 @@ locals {
 
 # This module is the primary user of the changes module.
 module "changes" {
-  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.18"
+  source = "git::https://github.com/s3d-club/terraform-external-changes?ref=v0.1.19"
 
   path = var.path
   tags = var.tags
 }
 
-# We change the time_static anytime the pet changes
-resource "time_static" "this" {
-  triggers = random_pet.this.keepers
-}
-
+# We force a new name when the context changes.
 resource "random_pet" "this" {
-  # if the context changes we force a new name
   keepers = merge(var.keepers, {
     context = var.context
   })
 
   length = var.pet_length
+}
+
+# We change the time_static anytime the pet changes
+resource "time_static" "this" {
+  triggers = random_pet.this.keepers
 }
