@@ -4,7 +4,7 @@ terraform {
   required_providers {
     external = {
       source  = "hashicorp/external"
-      version = ">=2.2.2"
+      version = ">=2.2.3"
     }
 
     random = {
@@ -14,7 +14,7 @@ terraform {
 
     time = {
       source  = "hashicorp/time"
-      version = ">=0.9.0"
+      version = ">=0.9.1"
     }
   }
 }
