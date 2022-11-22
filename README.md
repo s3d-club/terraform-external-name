@@ -1,10 +1,9 @@
 # Name Module
 A module for the management of names.
 
-## Also READ
-Please read our [LICENSE][lice], [CONTRIBUTING][cont], [CODE-OF-CONDUCT][code],
-and [CHANGES][chge] documents before working in this project and anytime they
-are updated.
+## Associated Documents
+Please read our [LICENSE][lice], [CONTRIBUTING][cont], and [CHANGES][chge]
+documents before working in this project and anytime they are updated.
 
 ## Overview
 This module produces randomized names that follow a style we find is useful.
@@ -29,6 +28,5 @@ limited to a set size. The final name will be unique enough to avoid collisions
 and still be comfortable for us.
 
 [chge]: ./CHANGES.md
-[code]: ./CODE-OF-CONDUCT.md
 [cont]: ./CONTRIBUTING.md
 [lice]: ./LICENSE.md
