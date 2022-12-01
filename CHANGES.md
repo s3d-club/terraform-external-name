@@ -22,5 +22,6 @@ This file describes the project history as it relates to tagged versions.
 - Updated `terraform` version
 - Updated `time` provider
 
-## [0.1.20](.)
+## [0.1.20](.) to [0.1.21](.)
 - Updated docs
+- Updated `required_version`
