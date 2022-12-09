@@ -1,8 +1,8 @@
 # Changes
-Recently completed and planned work is tracked here.
+This file describes the project history as it relates to tagged versions.
 
-## [0.0.0](.)
-- Add created
+## 0.0.0
+- Created the project
 
-## [Next](.)
-- **TODO** Add CI/CD
+## 1.0.0
+- Completed the first release
